@@ -1,5 +1,7 @@
 package org.example.modelos;
 
+import java.time.LocalDate;
+
 public class Seguro {
 
     // Atributos
@@ -12,7 +14,10 @@ public class Seguro {
      boolean fumador;
      boolean enfermedadesPreexistentes;
      string compañiaSeguros;
+
+     LocalDate fechaInicioCobertura;
      string numeroPoliza
+
 
     public Double Seguro(String nombreAsegurado, int edadAsegurado, String beneficiario,
                   double montoCobertura, String tipoPoliza, int duracionPoliza, boolean fumador,
