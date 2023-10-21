@@ -5,23 +5,23 @@ import java.time.LocalDate;
 public class Seguro {
 
     // Atributos
-     String nombreAsegurado
-     int edadAsegurado;
-     String beneficiario
-     double montoCobertura
-     string tipoPoliza
-     int duracionPoliza;
-     boolean fumador;
-     boolean enfermedadesPreexistentes;
-     string compañiaSeguros;
+     private String nombreAsegurado;
+     private Integer edadAsegurado;
+     private String beneficiario;
+     private Long montoCobertura;
+     private String tipoPoliza;
+     private Integer duracionPoliza;
+     private Boolean fumador;
+     private String enfermedadesPreexistentes;
+     private String compañiaSeguros;
+     private LocalDate fechaInicioCobertura;
 
-     LocalDate fechaInicioCobertura;
-     string numeroPoliza
+     private Integer numeroPoliza;
 
+    public Seguro() {
+    }
 
-    public Double Seguro(String nombreAsegurado, int edadAsegurado, String beneficiario,
-                  double montoCobertura, String tipoPoliza, int duracionPoliza, boolean fumador,
-                  boolean enfermedadesPreexistentes, String compañiaSeguros, String numeroPoliza) {
+    public Seguro(String nombreAsegurado, Integer edadAsegurado, String beneficiario, Long montoCobertura, String tipoPoliza, Integer duracionPoliza, Boolean fumador, String enfermedadesPreexistentes, String compañiaSeguros, LocalDate fechaInicioCobertura, Integer numeroPoliza) {
         this.nombreAsegurado = nombreAsegurado;
         this.edadAsegurado = edadAsegurado;
         this.beneficiario = beneficiario;
@@ -31,25 +31,96 @@ public class Seguro {
         this.fumador = fumador;
         this.enfermedadesPreexistentes = enfermedadesPreexistentes;
         this.compañiaSeguros = compañiaSeguros;
+        this.fechaInicioCobertura = fechaInicioCobertura;
         this.numeroPoliza = numeroPoliza;
     }
 
-    public void calcularPrima() {
-        double primaBase = 500;
-        double primaFinal = primaBase;
+    public String getNombreAsegurado() {
+        return nombreAsegurado;
+    }
 
+    public Integer getEdadAsegurado() {
+        return edadAsegurado;
+    }
 
-        if (edadAsegurado < 30) {
-            primaFinal -= 100
-        } else if (edadAsegurado > 60) {
-            primaFinal += 200;
-        }
+    public String getBeneficiario() {
+        return beneficiario;
+    }
 
-        // Aplicar ajustes basados en el monto de cobertura
-        if (montoCobertura > 1000000 {
-            primaFinal += 300;
-        }
+    public Long getMontoCobertura() {
+        return montoCobertura;
+    }
 
-        System.out.println("La prima del seguro de vida es: $" + primaFinal);
+    public String getTipoPoliza() {
+        return tipoPoliza;
+    }
+
+    public Integer getDuracionPoliza() {
+        return duracionPoliza;
+    }
+
+    public Boolean getFumador() {
+        return fumador;
+    }
+
+    public String getEnfermedadesPreexistentes() {
+        return enfermedadesPreexistentes;
+    }
+
+    public String getCompañiaSeguros() {
+        return compañiaSeguros;
+    }
+
+    public LocalDate getFechaInicioCobertura() {
+        return fechaInicioCobertura;
+    }
+
+    public Integer getNumeroPoliza() {
+        return numeroPoliza;
+    }
+
+    public void setNombreAsegurado(String nombreAsegurado) {
+        this.nombreAsegurado = nombreAsegurado;
+    }
+
+    public void setEdadAsegurado(Integer edadAsegurado) {
+        this.edadAsegurado = edadAsegurado;
+    }
+
+    public void setBeneficiario(String beneficiario) {
+        this.beneficiario = beneficiario;
+    }
+
+    public void setMontoCobertura(Long montoCobertura) {
+        this.montoCobertura = montoCobertura;
+    }
+
+    public void setTipoPoliza(String tipoPoliza) {
+        this.tipoPoliza = tipoPoliza;
+    }
+
+    public void setDuracionPoliza(Integer duracionPoliza) {
+        this.duracionPoliza = duracionPoliza;
+    }
+
+    public void setFumador(Boolean fumador) {
+        this.fumador = fumador;
+    }
+
+    public void setEnfermedadesPreexistentes(String enfermedadesPreexistentes) {
+        this.enfermedadesPreexistentes = enfermedadesPreexistentes;
+    }
+
+    public void setCompañiaSeguros(String compañiaSeguros) {
+        this.compañiaSeguros = compañiaSeguros;
+    }
+
+    public void setFechaInicioCobertura(LocalDate fechaInicioCobertura) {
+        this.fechaInicioCobertura = fechaInicioCobertura;
+    }
+
+    public void setNumeroPoliza(Integer numeroPoliza) {
+        this.numeroPoliza = numeroPoliza;
     }
 }
+
